@@ -1,6 +1,6 @@
 """Run this script using the syntax below:
 sudo python3 arp_poison.py -M  my_mac -V Victim_mac Victim_ip -R Router_mac Router_ip
-Disclimer:!!!!!! This is for educationnal purpose only,don't use it on netwoks you don't own !!!!!!!!!
+Disclaimer:!!!!!! This is for educationnal purpose only,don't use it on networks you don't own !!!!!!!!!
 """
 import scapy.all as scapy
 import os
@@ -30,11 +30,11 @@ def in_sudo_mode():
         exit()
 #valide command line
 def get_cmd_arguments():
-    """ This function validates the command line arguments supplied on program start-up"""
+
     Args = None
     # Ensure that the user has specified 9 arguments
     if len(sys.argv) != 9:
-        print("Error!!!!! You specified less than 9 arguments")
+        print("Error!!!!! You specified less or more than 9 arguments")
         return Args
     elif sys.argv[1]=='-M' and sys.argv[3]=='-V'and sys.argv[6]=='-R':
         try:
