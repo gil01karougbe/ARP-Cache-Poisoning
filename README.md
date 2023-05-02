@@ -1,23 +1,29 @@
-#ARP-Cache-Poisoning
-"""
-    Disclaimer: this is for educational purpose only ; Do not use against any network you don't own.
-"""
+# ARP-Cache-Poisoning
+ **Disclaimer: this is for educational purpose only ; Do not use against any network you don't own.**
+
+
 #by gilles karougbe
-#This Tool is developed as part of my internship (jully-august 2022) on the topic 'network attack by layers'
+
+#This Tool is developed as part of my internship (jully-august 2022) on the topic 'network attacks by layers'
+
 #This  work is supervised by Pr Mohammed SABER ,teacher at ENSAO
 
-[steps to use the program]
-1) git clone https://github.com/gil01karougbe/ARP-Cache-Poisoning.git
+# [steps to use the program]
 
-2)cd ARP-Cache-Poisoning
+    $ git clone https://github.com/gil01karougbe/ARP-Cache-Poisoning.git
 
-3)chmod +x setup.sh
+    $ cd ARP-Cache-Poisoning
 
-4)Run setup ./setup.sh
+    $ sudo chmod +x setup.sh
 
-5)Run:
+    $ ./setup.sh
 
-sudo python3 arp_poison.py -M hacker_mac -V victim_mac victim_ip -R getway_mac getway_ip
-
+    $ sudo python3 arp_poison.py -M hacker_mac -V victim_mac victim_ip -R getway_mac getway_ip
 
 
+# Remarques
+Run 
+
+      $ arp-scan -I eth0 192.168.1.0/24
+
+To discover Informations about the network in order to lunch the attack
