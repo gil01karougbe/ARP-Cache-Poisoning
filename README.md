@@ -14,7 +14,7 @@
 
     $ cd ARP-Cache-Poisoning
 
-     $ pip install -r requirements.txt
+    $ pip install -r requirements.txt
 
     $ sudo python3 arp_poison.py -M hacker_mac -V victim_mac victim_ip -R getway_mac getway_ip
 
