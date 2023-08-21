@@ -1,4 +1,0 @@
-scapy
-sys
-time
-os

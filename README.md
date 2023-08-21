@@ -4,7 +4,7 @@
 
 #by gilles karougbe
 
-#This Tool is developed as part of my internship (jully-august 2022) on the topic 'network attacks by layers'
+#This Script is written as part of my internship (jully-august 2022) on the topic 'network attacks by layers'
 
 #This  work is supervised by Pr Mohammed SABER ,teacher at ENSAO
 
@@ -14,9 +14,7 @@
 
     $ cd ARP-Cache-Poisoning
 
-    $ sudo chmod +x setup.sh
-
-    $ ./setup.sh
+     $ pip install -r requirements.txt
 
     $ sudo python3 arp_poison.py -M hacker_mac -V victim_mac victim_ip -R getway_mac getway_ip
 
